@@ -108,6 +108,19 @@ const requestsMocks = {
     },
   },
 
+  managerViewRequestsProps: {
+    requests: {
+      dataError: {},
+      data: {},
+      singleData: {},
+    },
+    managerSearchRequest: {
+      status: '',
+      managerSearchData: null,
+      managerSearchDataError: null,
+    },
+  },
+
   getLocationsProps: {
     locations: {
       data: null,

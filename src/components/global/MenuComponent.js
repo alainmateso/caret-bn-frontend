@@ -9,13 +9,14 @@ import {
   Notifications, AccountCircle,
   ExitToApp, FileCopy, HomeOutlined,
 } from '@material-ui/icons';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import AirlineSeatFlatAngled from '@material-ui/icons/AirlineSeatFlatAngled';
 import GroupIcon from '@material-ui/icons/Group';
 import barefootLogo from '../../assets/images/foot-print.png';
 import { GetUserProfile } from '../../actions/profileAction';
 import authHelper from '../../helpers/authHelper';
 
-const { checkSupplier, checkAdmin } = authHelper;
+const { checkSupplier, checkAdmin, checkManager } = authHelper;
 
 export class MenuComponent extends Component {
     state = {
@@ -67,6 +68,15 @@ export class MenuComponent extends Component {
                         <div className="account-icon">
                             <FileCopy className="icon" />
                             Requests
+                        </div>
+                      )}
+                </Link>
+                <Link to="/user-manager">
+                    {checkManager() ? null
+                      : (
+                        <div className="account-icon">
+                          <AssignmentIndIcon className="icon" />
+                          Manager
                         </div>
                       )}
                 </Link>
