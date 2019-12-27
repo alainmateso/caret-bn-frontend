@@ -1,0 +1,18 @@
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+.vscode/
+package-lock.json
+
+# Build files
+build
+dist
+lib
+
+# Coverage
+coverage
+
+# env file
+.env
